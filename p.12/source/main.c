@@ -1,22 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int square(int y);
-
 int main(void)
 {
-    int x;
+    int n[10];
+    int i;
 
-    for (x = 1; x <= 10; x++)
+    for (i = 0; i < 10; i++)
     {
-        printf("%d ", square(x));
+        n[i] = 0;
     }
-    printf("\n");
+
+    printf("%s%13s\n", "Element", "Value");
+
+    for (i = 0; i < 10; i++)
+    {
+        printf("%7d%13d\n", i, n[i]);
+    }
+
     system("pause");
     return 0;
-}
-
-int square(int y)
-{
-    return y * y;
 }
